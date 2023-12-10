@@ -5,7 +5,7 @@ import TopSwitch from "./TopSwitch";
 import { useEffect, useState } from "react";
 import loader from "../functions/loader";
 import fetchVertretungsplan from "../functions/fetchVertretungsplan";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
 function Text() {
   const darkColor = "#1e293b";
@@ -31,6 +31,7 @@ function Text() {
     loader();
     setActiveData(active === 0 ? data_1 : data_2);
     setError(data_1?.title === undefined || data_2?.title === undefined);
+    animate("div", { opacity: 1, y: 0 });
   }, [active, activeData, data_1, data_2]);
 
   return (
@@ -65,10 +66,13 @@ function Text() {
             activeData={activeData}
           />
         </p>
-        <div
+        <motion.div
           className={
             "TextBox space-y-4 rounded-md border border-gray-800 bg-gray-900 p-4 text-white lg:p-6"
           }
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          key={active}
         >
           {activeData?.klassen !== undefined ? (
             activeData.text.split("\n").map((item, i) => (
@@ -77,13 +81,18 @@ function Text() {
               </p>
             ))
           ) : (
-            <Skeleton
-              count={10}
-              baseColor={darkColor}
-              highlightColor={darkColorHighlight}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <Skeleton
+                count={10}
+                baseColor={darkColor}
+                highlightColor={darkColorHighlight}
+              />
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

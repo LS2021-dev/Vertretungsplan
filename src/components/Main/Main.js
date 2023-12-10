@@ -7,7 +7,7 @@ import SkeletonCard from "./SkeletonCard";
 import loader from "../../functions/loader";
 import Alert from "../Alert";
 import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
-import { motion } from "framer-motion";
+import { animate, motion, stagger } from "framer-motion";
 
 function Main() {
   const [showMenu, setShowMenu] = useState(false);
@@ -74,15 +74,20 @@ function Main() {
                   (userData.userWahlkurse && value.klasse.includes("Wahlkurs"))
                 ) {
                   return (
-                    <Card
-                      stunde={value.stunde}
-                      fach={value.fach}
-                      raum={value.raum}
-                      lehrer={value.lehrer}
-                      bemerkung={value.bemerkung}
-                      wahlkurs={value.klasse.includes("Wahlkurs")}
-                      key={crypto.randomUUID()}
-                    />
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                    >
+                      <Card
+                        stunde={value.stunde}
+                        fach={value.fach}
+                        raum={value.raum}
+                        lehrer={value.lehrer}
+                        bemerkung={value.bemerkung}
+                        wahlkurs={value.klasse.includes("Wahlkurs")}
+                        key={crypto.randomUUID()}
+                      />
+                    </motion.div>
                   );
                 } else return null;
               })

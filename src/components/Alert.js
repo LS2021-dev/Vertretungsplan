@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
+
 function Alert(props) {
   return (
-    <div className="Alert col-span-3">
+    <motion.div
+      className="Alert col-span-3"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <div
         className={
           "rounded-md border border-gray-800 bg-gray-900 p-4 text-white lg:p-6"
@@ -17,7 +23,7 @@ function Alert(props) {
           </span>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
