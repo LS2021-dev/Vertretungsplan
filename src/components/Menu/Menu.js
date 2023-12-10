@@ -1,10 +1,30 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { animate, stagger } from "framer-motion";
 
-function Menu(props) {
+function Menu({ index, showMenu }) {
   const classActive =
     "block rounded-lg px-4 py-2 text-sm font-medium bg-gray-800 text-gray-200";
   const classInactive =
     "block rounded-lg px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-800 hover:text-gray-200";
+
+  const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(showMenu);
+    animate(
+      "li",
+      isOpen
+        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+      {
+        duration: 0.2,
+        delay: isOpen ? staggerMenuItems : 0,
+      },
+    );
+  }, [isOpen, showMenu, staggerMenuItems]);
 
   return (
     <div className={"Menu"}>
@@ -15,10 +35,7 @@ function Menu(props) {
       >
         <ul className="space-y-1">
           <li>
-            <Link
-              to="/"
-              className={props.index === 0 ? classActive : classInactive}
-            >
+            <Link to="/" className={index === 0 ? classActive : classInactive}>
               Vertretungsplan
             </Link>
           </li>
@@ -26,7 +43,7 @@ function Menu(props) {
           <li>
             <Link
               to="/text"
-              className={props.index === 1 ? classActive : classInactive}
+              className={index === 1 ? classActive : classInactive}
             >
               Text
             </Link>
@@ -35,7 +52,7 @@ function Menu(props) {
           <li>
             <Link
               to="/init"
-              className={props.index === 2 ? classActive : classInactive}
+              className={index === 2 ? classActive : classInactive}
             >
               Klasse ändern
             </Link>
@@ -44,7 +61,7 @@ function Menu(props) {
           <li>
             <Link
               to="https://github.com/LS2021-dev/Vertretungsplan"
-              className={props.index === 3 ? classActive : classInactive}
+              className={index === 3 ? classActive : classInactive}
             >
               GitHub
             </Link>

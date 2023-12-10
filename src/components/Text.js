@@ -5,6 +5,7 @@ import TopSwitch from "./TopSwitch";
 import { useEffect, useState } from "react";
 import loader from "../functions/loader";
 import fetchVertretungsplan from "../functions/fetchVertretungsplan";
+import { motion } from "framer-motion";
 
 function Text() {
   const darkColor = "#1e293b";
@@ -32,10 +33,21 @@ function Text() {
     setError(data_1?.title === undefined || data_2?.title === undefined);
   }, [active, activeData, data_1, data_2]);
 
+  const menu = {
+    open: { opacity: 0, display: "block" },
+    closed: {
+      opacity: 0,
+      display: "none",
+      transition: { display: { delay: 0.2 } },
+    },
+  };
+
   return (
     <div className={"Text"}>
       <MenuButton toggleMenu={() => setShowMenu(!showMenu)} />
-      {showMenu && <Menu index={1} />}
+      <motion.div animate={showMenu ? "opened" : "closed"} variants={menu}>
+        <Menu index={1} showMenu={showMenu} />
+      </motion.div>
       <div
         className={`flex flex-col p-8 lg:p-14 ${
           showMenu && "h-screen overflow-hidden"
@@ -53,11 +65,15 @@ function Text() {
         </p>
         <div
           className={
-            "rounded-md border border-gray-800 bg-gray-900 p-4 text-white lg:p-6"
+            "TextBox space-y-4 rounded-md border border-gray-800 bg-gray-900 p-4 text-white lg:p-6"
           }
         >
           {activeData?.klassen !== undefined ? (
-            activeData.text
+            activeData.text.split("\n").map((item, i) => (
+              <p key={i} className={"mb-2"}>
+                {item}
+              </p>
+            ))
           ) : (
             <Skeleton
               count={10}

@@ -7,6 +7,7 @@ import SkeletonCard from "./SkeletonCard";
 import loader from "../../functions/loader";
 import Alert from "../Alert";
 import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
+import { motion } from "framer-motion";
 
 function Main() {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,12 +30,23 @@ function Main() {
     loader();
     setUserData(JSON.parse(localStorage.getItem("userData")));
     setActiveData(active === 0 ? data_1 : data_2);
-  }, [active, activeData, data_1, data_2]);
+  }, [active, activeData, data_1, data_2, showMenu]);
+
+  const menu = {
+    open: { opacity: 0, display: "block" },
+    closed: {
+      opacity: 0,
+      display: "none",
+      transition: { display: { delay: 0.2 } },
+    },
+  };
 
   return (
     <div className={"Main"}>
       <MenuButton toggleMenu={() => setShowMenu(!showMenu)} />
-      {showMenu && <Menu index={0} />}
+      <motion.div animate={showMenu ? "opened" : "closed"} variants={menu}>
+        <Menu index={0} showMenu={showMenu} />
+      </motion.div>
       <div
         className={`flex flex-col p-8 lg:p-14 ${
           showMenu && "h-screen overflow-hidden"
