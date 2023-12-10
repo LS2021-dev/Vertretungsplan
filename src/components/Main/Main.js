@@ -32,19 +32,21 @@ function Main() {
     setActiveData(active === 0 ? data_1 : data_2);
   }, [active, activeData, data_1, data_2, showMenu]);
 
-  const menu = {
-    open: { opacity: 0, display: "block" },
-    closed: {
-      opacity: 0,
-      display: "none",
-      transition: { display: { delay: 0.2 } },
-    },
-  };
-
   return (
     <div className={"Main"}>
       <MenuButton toggleMenu={() => setShowMenu(!showMenu)} />
-      <motion.div animate={showMenu ? "opened" : "closed"} variants={menu}>
+      <motion.div
+        initial={{ display: "none", opacity: 0 }}
+        animate={
+          showMenu
+            ? { opacity: 1, display: "block" }
+            : {
+                opacity: 0,
+                display: "none",
+                transition: { display: { delay: 0.2 } },
+              }
+        }
+      >
         <Menu index={0} showMenu={showMenu} />
       </motion.div>
       <div

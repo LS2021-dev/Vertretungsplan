@@ -33,19 +33,21 @@ function Text() {
     setError(data_1?.title === undefined || data_2?.title === undefined);
   }, [active, activeData, data_1, data_2]);
 
-  const menu = {
-    open: { opacity: 0, display: "block" },
-    closed: {
-      opacity: 0,
-      display: "none",
-      transition: { display: { delay: 0.2 } },
-    },
-  };
-
   return (
     <div className={"Text"}>
       <MenuButton toggleMenu={() => setShowMenu(!showMenu)} />
-      <motion.div animate={showMenu ? "opened" : "closed"} variants={menu}>
+      <motion.div
+        initial={{ display: "none", opacity: 0 }}
+        animate={
+          showMenu
+            ? { opacity: 1, display: "block" }
+            : {
+                opacity: 0,
+                display: "none",
+                transition: { display: { delay: 0.2 } },
+              }
+        }
+      >
         <Menu index={1} showMenu={showMenu} />
       </motion.div>
       <div
