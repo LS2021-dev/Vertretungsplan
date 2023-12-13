@@ -14,9 +14,19 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((res) => {
-      return fetch(event.request).catch(() => caches.match("offline.html"));
-    }),
+    fetch(event.request)
+      .then((res) => {
+        const resClone = res.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, resClone);
+        });
+        return res;
+      })
+      .catch(() =>
+        caches
+          .match(event.request)
+          .then((res) => res || caches.match("offline.html")),
+      ),
   );
 });
 

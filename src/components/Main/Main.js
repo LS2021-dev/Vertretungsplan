@@ -7,7 +7,7 @@ import SkeletonCard from "./SkeletonCard";
 import loader from "../../functions/loader";
 import Alert from "../Alert";
 import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
-import { animate, motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Main() {
   const [showMenu, setShowMenu] = useState(false);
