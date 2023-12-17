@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { animate, stagger } from "framer-motion";
 
-function Menu({ index, showMenu }) {
+function Menu({ index, showMenu, setShowMenu }) {
   const classActive =
     "block rounded-lg px-4 py-2 text-sm font-medium bg-gray-800 text-gray-200";
   const classInactive =
@@ -11,6 +11,12 @@ function Menu({ index, showMenu }) {
   const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleBackdropClick = (event) => {
+    if (event.target.classList.contains("bg-gray-950/60")) {
+      setShowMenu(false);
+    }
+  };
 
   useEffect(() => {
     setIsOpen(showMenu);
@@ -32,6 +38,7 @@ function Menu({ index, showMenu }) {
         className={
           "fixed z-10 flex h-screen w-full items-center justify-center bg-gray-950/60 backdrop-blur-md"
         }
+        onClick={handleBackdropClick}
       >
         <ul className="space-y-1">
           <li>

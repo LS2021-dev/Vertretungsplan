@@ -47,7 +47,11 @@ function Main() {
               }
         }
       >
-        <Menu index={0} showMenu={showMenu} />
+        <Menu
+          index={0}
+          showMenu={showMenu}
+          setShowMenu={(bool) => setShowMenu(bool)}
+        />
       </motion.div>
       <div
         className={`flex flex-col p-8 lg:p-14 ${

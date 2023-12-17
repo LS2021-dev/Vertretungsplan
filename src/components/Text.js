@@ -49,7 +49,11 @@ function Text() {
               }
         }
       >
-        <Menu index={1} showMenu={showMenu} />
+        <Menu
+          index={1}
+          showMenu={showMenu}
+          setShowMenu={(bool) => setShowMenu(bool)}
+        />
       </motion.div>
       <div
         className={`flex flex-col p-8 lg:p-14 ${
