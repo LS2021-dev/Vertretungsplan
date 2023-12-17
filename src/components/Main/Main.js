@@ -72,7 +72,7 @@ function Main() {
             activeData?.klassen.includes(userData.userKlasse) ||
             (userData.userWahlkurse &&
               activeData?.klassen.includes("Wahlkurs")) ? (
-              activeData?.vertretungsplan?.map((value) => {
+              activeData?.vertretungsplan?.map((value, index) => {
                 if (
                   value.klasse.includes(userData.userKlasse) ||
                   (userData.userWahlkurse && value.klasse.includes("Wahlkurs"))
@@ -89,7 +89,7 @@ function Main() {
                         lehrer={value.lehrer}
                         bemerkung={value.bemerkung}
                         wahlkurs={value.klasse.includes("Wahlkurs")}
-                        key={crypto.randomUUID()}
+                        key={index}
                       />
                     </motion.div>
                   );
@@ -103,8 +103,8 @@ function Main() {
               />
             )
           ) : (
-            [...Array(3)].map(() => {
-              return <SkeletonCard key={crypto.randomUUID()} />;
+            [...Array(3)].map((v, i) => {
+              return <SkeletonCard key={i} />;
             })
           )}
         </div>
