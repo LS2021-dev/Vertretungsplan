@@ -95,6 +95,7 @@ function Main() {
               <Alert
                 title={"Keine Vertretungen"}
                 text={"Es wurden keine Vertretungen gefunden"}
+                key={active}
               />
             )
           ) : (
