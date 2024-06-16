@@ -6,7 +6,7 @@ function parseVertretungsplan(data) {
     let text;
     try {
       text = data.querySelector(
-        "body > table.info > tbody > tr:nth-child(3) > td",
+        "body > table.info > tbody > tr:nth-child(2) > td",
       ).innerText;
     } catch (e) {
       text = "---";

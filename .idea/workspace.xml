@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="">
+    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Request Bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +64,7 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.deploy.executor": "Run",
     "npm.start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier",
     "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
@@ -74,7 +72,17 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -88,6 +96,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +135,7 @@
       <workItem from="1718110133761" duration="330000" />
       <workItem from="1718110518292" duration="46000" />
       <workItem from="1718568697676" duration="347000" />
-      <workItem from="1718569058769" duration="1434000" />
+      <workItem from="1718569058769" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -192,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702820175786</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Request Bugfix">
+      <option name="closed" value="true" />
+      <created>1718570858561</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718570858561</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +220,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/gh-pages" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -222,6 +256,7 @@
     <MESSAGE value="Menu" />
     <MESSAGE value="Menu handleBackdropClick" />
     <MESSAGE value="SkeletonCard Bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="SkeletonCard Bugfix" />
+    <MESSAGE value="Request Bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Request Bugfix" />
   </component>
 </project>
