@@ -7,6 +7,9 @@
     <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LS2021-dev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LS2021-dev/Vertretungsplan.git&quot;,
+    &quot;accountId&quot;: &quot;a9c27092-0fc3-4507-9708-fd4ba222d45d&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,22 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ludwig/Desktop/spotify&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ludwig\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Ludwig/Desktop/twitch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
+    "ts.external.directory.path": "C:\\Users\\Ludwig\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -70,6 +91,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +114,19 @@
       <workItem from="1702743360088" duration="845000" />
       <workItem from="1702810368059" duration="2180000" />
       <workItem from="1702816385857" duration="3257000" />
-      <workItem from="1702819838510" duration="232000" />
+      <workItem from="1702819838510" duration="431000" />
+      <workItem from="1702820687839" duration="294000" />
+      <workItem from="1703586434363" duration="1000" />
+      <workItem from="1704621883444" duration="123000" />
+      <workItem from="1705684887262" duration="163000" />
+      <workItem from="1717081902391" duration="669000" />
+      <workItem from="1717152278333" duration="1227000" />
+      <workItem from="1717153865727" duration="779000" />
+      <workItem from="1717158548636" duration="1496000" />
+      <workItem from="1718110133761" duration="330000" />
+      <workItem from="1718110518292" duration="46000" />
+      <workItem from="1718568697676" duration="347000" />
+      <workItem from="1718569058769" duration="1434000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -144,11 +184,30 @@
       <option name="project" value="LOCAL" />
       <updated>1702819688670</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="SkeletonCard Bugfix">
+      <option name="closed" value="true" />
+      <created>1702820175786</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702820175786</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -162,6 +221,7 @@
     <MESSAGE value="Cache version" />
     <MESSAGE value="Menu" />
     <MESSAGE value="Menu handleBackdropClick" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu handleBackdropClick" />
+    <MESSAGE value="SkeletonCard Bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="SkeletonCard Bugfix" />
   </component>
 </project>

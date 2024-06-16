@@ -3,9 +3,6 @@ function parseVertretungsplan(data) {
     let title = data.querySelector("body > h3").innerText;
     let date = title.split(" ")[2];
     let lastUpdate = data.querySelector("body > div").innerText;
-    let klassen = data.querySelector(
-      "body > table.info > tbody > tr:nth-child(2) > td:nth-child(2)",
-    ).innerText;
     let text;
     try {
       text = data.querySelector(
@@ -65,7 +62,6 @@ function parseVertretungsplan(data) {
       title: title,
       date: date,
       lastUpdate: lastUpdate,
-      klassen: klassen,
       text: text,
       vertretungsplan: vertretungsplan,
     };

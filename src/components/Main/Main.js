@@ -68,10 +68,10 @@ function Main() {
           />
         </p>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-          {activeData?.klassen !== undefined ? (
-            activeData?.klassen.includes(userData.userKlasse) ||
+          {activeData?.vertretungsplan !== undefined ? (
+            activeData?.vertretungsplan.some(e=> e.klasse.includes(userData.userKlasse)) ||
             (userData.userWahlkurse &&
-              activeData?.klassen.includes("Wahlkurs")) ? (
+              activeData?.vertretungsplan.some(e=> e.klasse.includes("Wahlkurs"))) ? (
               activeData?.vertretungsplan?.map((value, index) => {
                 if (
                   value.klasse.includes(userData.userKlasse) ||
@@ -88,7 +88,7 @@ function Main() {
                         raum={value.raum}
                         lehrer={value.lehrer}
                         bemerkung={value.bemerkung}
-                        wahlkurs={value.klasse.includes("Wahlkurs")}
+                        wahlkurs={activeData?.vertretungsplan.some(e=> e.klasse.includes("Wahlkurs"))}
                         key={index}
                       />
                     </motion.div>

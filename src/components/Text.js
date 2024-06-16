@@ -78,7 +78,7 @@ function Text() {
           animate={{ opacity: 1, y: 0 }}
           key={active}
         >
-          {activeData?.klassen !== undefined ? (
+          {activeData?.vertretungsplan !== undefined ? (
             activeData.text.split("\n").map((item, i) => (
               <p key={i} className={"mb-2"}>
                 {item}
