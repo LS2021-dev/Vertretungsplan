@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Request Bugfix 2">
-      <change afterPath="$PROJECT_DIR$/src/components/LastUpdate.js" afterDir="false" />
+    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Card cleanup&#10;LastUpdate component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -104,8 +100,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +142,7 @@
       <workItem from="1718568697676" duration="347000" />
       <workItem from="1718569058769" duration="3241000" />
       <workItem from="1718829734946" duration="21000" />
-      <workItem from="1718829766253" duration="3858000" />
+      <workItem from="1718829766253" duration="4194000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -228,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718571416618</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Card cleanup&#10;LastUpdate component">
+      <option name="closed" value="true" />
+      <created>1718833731663</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718833731663</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +281,7 @@
     <MESSAGE value="SkeletonCard Bugfix" />
     <MESSAGE value="Request Bugfix" />
     <MESSAGE value="Request Bugfix 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Request Bugfix 2" />
+    <MESSAGE value="Card cleanup&#10;LastUpdate component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card cleanup&#10;LastUpdate component" />
   </component>
 </project>
