@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Request Bugfix">
+    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Request Bugfix 2">
+      <change afterPath="$PROJECT_DIR$/src/components/LastUpdate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -67,6 +75,7 @@
     "npm.deploy.executor": "Run",
     "npm.start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
     "ts.external.directory.path": "C:\\Users\\Ludwig\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -135,7 +144,9 @@
       <workItem from="1718110133761" duration="330000" />
       <workItem from="1718110518292" duration="46000" />
       <workItem from="1718568697676" duration="347000" />
-      <workItem from="1718569058769" duration="2301000" />
+      <workItem from="1718569058769" duration="3241000" />
+      <workItem from="1718829734946" duration="21000" />
+      <workItem from="1718829766253" duration="3858000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -209,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718570858561</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Request Bugfix 2">
+      <option name="closed" value="true" />
+      <created>1718571416618</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718571416618</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +276,7 @@
     <MESSAGE value="Menu handleBackdropClick" />
     <MESSAGE value="SkeletonCard Bugfix" />
     <MESSAGE value="Request Bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Request Bugfix" />
+    <MESSAGE value="Request Bugfix 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Request Bugfix 2" />
   </component>
 </project>

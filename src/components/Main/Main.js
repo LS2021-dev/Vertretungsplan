@@ -8,6 +8,12 @@ import loader from "../../functions/loader";
 import Alert from "../Alert";
 import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
 import { motion } from "framer-motion";
+import moment from "moment";
+import { FaArrowRotateRight } from "react-icons/fa6";
+import * as PropTypes from "prop-types";
+import LastUpdate from "../LastUpdate";
+
+LastUpdate.propTypes = { onClick: PropTypes.func };
 
 function Main() {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,6 +29,9 @@ function Main() {
     fetchVertretungsplan().then((r) => {
       setData_1(r[0]);
       setData_2(r[1]);
+      if (data_1?.vertretungsplan !== undefined) {
+        localStorage.lastUpdate = moment();
+      }
     });
   }, []);
 
@@ -69,9 +78,13 @@ function Main() {
         </p>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           {activeData?.vertretungsplan !== undefined ? (
-            activeData?.vertretungsplan.some(e=> e.klasse.includes(userData.userKlasse)) ||
+            activeData?.vertretungsplan.some((e) =>
+              e.klasse.includes(userData.userKlasse),
+            ) ||
             (userData.userWahlkurse &&
-              activeData?.vertretungsplan.some(e=> e.klasse.includes("Wahlkurs"))) ? (
+              activeData?.vertretungsplan.some((e) =>
+                e.klasse.includes("Wahlkurs"),
+              )) ? (
               activeData?.vertretungsplan?.map((value, index) => {
                 if (
                   value.klasse.includes(userData.userKlasse) ||
@@ -88,7 +101,9 @@ function Main() {
                         raum={value.raum}
                         lehrer={value.lehrer}
                         bemerkung={value.bemerkung}
-                        wahlkurs={activeData?.vertretungsplan.some(e=> e.klasse.includes("Wahlkurs"))}
+                        wahlkurs={activeData?.vertretungsplan.some((e) =>
+                          e.klasse.includes("Wahlkurs"),
+                        )}
                         key={index}
                       />
                     </motion.div>
@@ -109,6 +124,7 @@ function Main() {
           )}
         </div>
       </div>
+      {localStorage.lastUpdate !== undefined && <LastUpdate />}
     </div>
   );
 }

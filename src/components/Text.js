@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import loader from "../functions/loader";
 import fetchVertretungsplan from "../functions/fetchVertretungsplan";
 import { animate, motion } from "framer-motion";
+import LastUpdate from "./LastUpdate";
 
 function Text() {
   const darkColor = "#1e293b";
@@ -98,6 +99,7 @@ function Text() {
           )}
         </motion.div>
       </div>
+      {localStorage.lastUpdate !== undefined && <LastUpdate />}
     </div>
   );
 }

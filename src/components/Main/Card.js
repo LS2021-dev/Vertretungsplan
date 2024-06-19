@@ -1,7 +1,7 @@
 function Card(props) {
   return (
     <div className={"Card"}>
-      <div className="flex h-full flex-col gap-4 rounded-md border border-gray-800 bg-gray-900 p-4 lg:p-6">
+      <div className="flex flex-col justify-between gap-4 rounded-md border border-gray-800 bg-gray-900 p-4 lg:h-60 lg:p-6">
         <div className={"flex justify-between"}>
           <span className="text-2xl font-medium text-white">
             {props.fach.includes("-") ? (
@@ -19,6 +19,7 @@ function Card(props) {
             <span className="text-xs font-medium">{props.stunde}</span>
           </div>
         </div>
+        <hr className="border-gray-700" />
         <div className={"my-auto"}>
           <strong className="block text-sm font-medium text-gray-400">
             {props.lehrer.includes("-") ? (
