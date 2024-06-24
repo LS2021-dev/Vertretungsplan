@@ -6,13 +6,12 @@ function LastUpdate() {
     <div className="LastUpdate">
       <div
         className={
-          "fixed bottom-0 right-0 z-40 flex items-center space-x-2 rounded-md bg-gray-950/60 px-2 py-1 text-gray-400 backdrop-blur-md"
+          "fixed bottom-3 right-3 z-40 flex cursor-pointer items-center space-x-2 rounded-md border border-gray-800 bg-gray-950/60 px-2 py-1 text-gray-400 backdrop-blur-md"
         }
+        onClick={() => window.location.reload()}
       >
         <span>{moment(localStorage.lastUpdate).fromNow()}</span>
-        <button onClick={() => window.location.reload()}>
-          <FaArrowRotateRight />
-        </button>
+        <FaArrowRotateRight />
       </div>
     </div>
   );
