@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Card cleanup&#10;LastUpdate component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LastUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LastUpdate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
     </list>
@@ -69,20 +71,31 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.deploy.executor": "Run",
+    "npm.format.executor": "Run",
     "npm.start.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Ludwig\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.deploy">
+  <component name="RunManager" selected="npm.format">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -100,15 +113,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
       </set>
     </attachedChunks>
   </component>
@@ -143,6 +157,10 @@
       <workItem from="1718569058769" duration="3241000" />
       <workItem from="1718829734946" duration="21000" />
       <workItem from="1718829766253" duration="4194000" />
+      <workItem from="1719130348459" duration="17000" />
+      <workItem from="1719259589140" duration="21000" />
+      <workItem from="1719259619894" duration="353000" />
+      <workItem from="1719260579995" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -239,6 +257,21 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -254,7 +287,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/gh-pages" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>

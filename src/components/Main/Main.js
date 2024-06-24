@@ -124,6 +124,7 @@ function Main() {
           )}
         </div>
       </div>
+      {localStorage.lastUpdate !== undefined && <LastUpdate />}
     </div>
   );
 }
