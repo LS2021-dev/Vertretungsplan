@@ -99,7 +99,7 @@ function Text() {
           )}
         </motion.div>
       </div>
-      {localStorage.lastUpdate !== undefined && <LastUpdate />}
+      {localStorage.lastUpdate !== undefined && !showMenu && <LastUpdate />}
     </div>
   );
 }
