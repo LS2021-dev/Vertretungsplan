@@ -3,14 +3,20 @@ function parseVertretungsplan(data) {
     let title = data.querySelector("body > h3").innerText;
     let date = title.split(" ")[2];
     let lastUpdate = data.querySelector("body > div").innerText;
-    let text;
-    try {
-      text = data.querySelector(
-        "body > table.info > tbody > tr:nth-child(2) > td",
-      ).innerText;
-    } catch (e) {
+    let text = "";
+
+
+    let textTable = data.querySelector("body > table.info > tbody")
+
+
+    if (textTable.children.length !== 1) {
+      for (let i = 2; i <= textTable.children.length; i++) {
+        text += textTable.querySelector(`tr:nth-child(${i})`).innerText + "\n\n";
+      }
+    } else {
       text = "---";
     }
+
     let table = Array.from(
       data.querySelectorAll("body > table.mon_list > tbody > tr"),
     );
@@ -27,7 +33,8 @@ function parseVertretungsplan(data) {
       fach = fach
         .replace("?", "→")
         .replaceAll("<s>", "-")
-        .replaceAll("</s>", "-");
+        .replaceAll("</s>", "-")
+        .replaceAll(/&nbsp;/g, "")
       raum = raum
         .replace("?", "→")
         .replaceAll("<s>", "-")

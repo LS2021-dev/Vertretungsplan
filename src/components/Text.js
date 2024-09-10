@@ -81,7 +81,7 @@ function Text() {
         >
           {activeData?.vertretungsplan !== undefined ? (
             activeData.text.split("\n").map((item, i) => (
-              <p key={i} className={"mb-2"}>
+              <p key={i}>
                 {item}
               </p>
             ))
