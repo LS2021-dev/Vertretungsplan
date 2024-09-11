@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="LastUpdate component done">
+    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Removed unused variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LastUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LastUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/MenuButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/MenuButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopSwitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopSwitch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +48,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/LS2021-dev/Vertretungsplan.git&quot;,
-    &quot;accountId&quot;: &quot;a9c27092-0fc3-4507-9708-fd4ba222d45d&quot;
+    &quot;accountId&quot;: &quot;b3deb4b5-cf2a-4828-b056-c1a642046566&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -71,14 +86,14 @@
     "npm.deploy.executor": "Run",
     "npm.format.executor": "Run",
     "npm.start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Desktop\\Vertretungsplan\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Documents\\GitHub\\Vertretungsplan\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Ludwig\\scoop\\apps\\webstorm\\2024.2.1-242.21829.149\\IDE\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.format">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -116,9 +131,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +180,8 @@
       <workItem from="1719259619894" duration="353000" />
       <workItem from="1719260579995" duration="1301000" />
       <workItem from="1719315908384" duration="131000" />
-      <workItem from="1725999144493" duration="2468000" />
+      <workItem from="1725999144493" duration="2952000" />
+      <workItem from="1726067563707" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -263,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719261382598</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Text not showing completely fix&#10;Text space fix&#10;Subject space fix">
+      <option name="closed" value="true" />
+      <created>1726001809323</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726001809323</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +353,7 @@
     <MESSAGE value="Request Bugfix 2" />
     <MESSAGE value="Card cleanup&#10;LastUpdate component" />
     <MESSAGE value="LastUpdate component done" />
-    <option name="LAST_COMMIT_MESSAGE" value="LastUpdate component done" />
+    <MESSAGE value="Text not showing completely fix&#10;Text space fix&#10;Subject space fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Text not showing completely fix&#10;Text space fix&#10;Subject space fix" />
   </component>
 </project>

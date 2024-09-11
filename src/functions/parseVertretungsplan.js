@@ -5,16 +5,16 @@ function parseVertretungsplan(data) {
     let lastUpdate = data.querySelector("body > div").innerText;
     let text = "";
 
+    let textTable = data.querySelector("body > table.info > tbody");
 
-    let textTable = data.querySelector("body > table.info > tbody")
+    text = textTable === null || textTable.children.length === 1 ? "---" : "";
 
-
-    if (textTable.children.length !== 1) {
-      for (let i = 2; i <= textTable.children.length; i++) {
-        text += textTable.querySelector(`tr:nth-child(${i})`).innerText + "\n\n";
-      }
-    } else {
-      text = "---";
+    if (text !== "---") {
+      Array.from(textTable.children)
+        .slice(1)
+        .forEach((child) => {
+          text += child.innerText + "\n\n";
+        });
     }
 
     let table = Array.from(
@@ -34,7 +34,7 @@ function parseVertretungsplan(data) {
         .replace("?", "→")
         .replaceAll("<s>", "-")
         .replaceAll("</s>", "-")
-        .replaceAll(/&nbsp;/g, "")
+        .replaceAll(/&nbsp;/g, "");
       raum = raum
         .replace("?", "→")
         .replaceAll("<s>", "-")

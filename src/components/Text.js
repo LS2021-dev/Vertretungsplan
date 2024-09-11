@@ -80,11 +80,7 @@ function Text() {
           key={active}
         >
           {activeData?.vertretungsplan !== undefined ? (
-            activeData.text.split("\n").map((item, i) => (
-              <p key={i}>
-                {item}
-              </p>
-            ))
+            activeData.text.split("\n").map((item, i) => <p key={i}>{item}</p>)
           ) : (
             <motion.div
               initial={{ opacity: 0, y: 20 }}

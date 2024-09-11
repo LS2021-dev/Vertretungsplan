@@ -9,7 +9,6 @@ import Alert from "../Alert";
 import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
 import { motion } from "framer-motion";
 import moment from "moment";
-import { FaArrowRotateRight } from "react-icons/fa6";
 import * as PropTypes from "prop-types";
 import LastUpdate from "../LastUpdate";
 
