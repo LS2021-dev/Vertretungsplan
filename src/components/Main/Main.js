@@ -1,4 +1,6 @@
+// src/components/Main/Main.js
 import { useEffect, useState } from "react";
+import { useVertretungsplan } from "../../context/VertretungsplanContext";
 import MenuButton from "../Menu/MenuButton";
 import Menu from "../Menu/Menu";
 import TopSwitch from "../TopSwitch";
@@ -6,7 +8,6 @@ import Card from "./Card";
 import SkeletonCard from "./SkeletonCard";
 import loader from "../../functions/loader";
 import Alert from "../Alert";
-import fetchVertretungsplan from "../../functions/fetchVertretungsplan";
 import { motion } from "framer-motion";
 import moment from "moment";
 import * as PropTypes from "prop-types";
@@ -18,27 +19,21 @@ function Main() {
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
-  const [data_1, setData_1] = useState({});
-  const [data_2, setData_2] = useState({});
+  const { data_1, data_2, error } = useVertretungsplan();
   const [activeData, setActiveData] = useState({});
-
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
-    fetchVertretungsplan().then((r) => {
-      setData_1(r[0]);
-      setData_2(r[1]);
-      if (data_1?.vertretungsplan !== undefined) {
-        localStorage.lastUpdate = moment();
-      }
-    });
-  }, []);
+    if (data_1?.vertretungsplan !== undefined) {
+      localStorage.lastUpdate = moment();
+    }
+  }, [data_1]);
 
   useEffect(() => {
     loader();
     setUserData(JSON.parse(localStorage.getItem("userData")));
     setActiveData(active === 0 ? data_1 : data_2);
-  }, [active, activeData, data_1, data_2, showMenu]);
+  }, [active, data_1, data_2, showMenu]);
 
   return (
     <div className={"Main"}>

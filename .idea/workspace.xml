@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Removed unused variables">
+    <list default="true" id="1fcae822-b1de-4bd8-bd32-c9f2cf3f4223" name="Changes" comment="Removed unused variables&#10;Prettier&#10;Not loading fix">
+      <change afterPath="$PROJECT_DIR$/src/context/VertretungsplanContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Alert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LastUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LastUpdate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/SkeletonCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/MenuButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/MenuButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopSwitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopSwitch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/fetchVertretungsplan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/parseVertretungsplan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,31 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Ludwig/Documents/GitHub/Vertretungsplan",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.deploy.executor": "Run",
-    "npm.format.executor": "Run",
-    "npm.start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ludwig\\Documents\\GitHub\\Vertretungsplan\\node_modules\\prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Ludwig\\scoop\\apps\\webstorm\\2024.2.1-242.21829.149\\IDE\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ludwig/Documents/GitHub/Vertretungsplan&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.deploy.executor&quot;: &quot;Run&quot;,
+    &quot;npm.format.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ludwig\\Documents\\GitHub\\Vertretungsplan\\node_modules\\prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ludwig\\scoop\\apps\\webstorm\\2024.2.1-242.21829.149\\IDE\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.format">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -181,7 +171,8 @@
       <workItem from="1719260579995" duration="1301000" />
       <workItem from="1719315908384" duration="131000" />
       <workItem from="1725999144493" duration="2952000" />
-      <workItem from="1726067563707" duration="519000" />
+      <workItem from="1726067563707" duration="828000" />
+      <workItem from="1726086145873" duration="4779000" />
     </task>
     <task id="LOCAL-00001" summary="Menu animation">
       <option name="closed" value="true" />
@@ -287,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726001809323</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Removed unused variables&#10;Prettier&#10;Not loading fix">
+      <option name="closed" value="true" />
+      <created>1726068147464</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726068147464</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +353,7 @@
     <MESSAGE value="Card cleanup&#10;LastUpdate component" />
     <MESSAGE value="LastUpdate component done" />
     <MESSAGE value="Text not showing completely fix&#10;Text space fix&#10;Subject space fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text not showing completely fix&#10;Text space fix&#10;Subject space fix" />
+    <MESSAGE value="Removed unused variables&#10;Prettier&#10;Not loading fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused variables&#10;Prettier&#10;Not loading fix" />
   </component>
 </project>

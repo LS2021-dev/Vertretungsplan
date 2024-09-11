@@ -3,8 +3,7 @@ import MenuButton from "./Menu/MenuButton";
 import Menu from "./Menu/Menu";
 import TopSwitch from "./TopSwitch";
 import { useEffect, useState } from "react";
-import loader from "../functions/loader";
-import fetchVertretungsplan from "../functions/fetchVertretungsplan";
+import { useVertretungsplan } from "../context/VertretungsplanContext";
 import { animate, motion } from "framer-motion";
 import LastUpdate from "./LastUpdate";
 
@@ -15,25 +14,13 @@ function Text() {
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
-  const [data_1, setData_1] = useState({});
-  const [data_2, setData_2] = useState({});
+  const { data_1, data_2, error } = useVertretungsplan();
   const [activeData, setActiveData] = useState({});
 
-  const [error, setError] = useState(false);
-
   useEffect(() => {
-    fetchVertretungsplan().then((r) => {
-      setData_1(r[0]);
-      setData_2(r[1]);
-    });
-  }, []);
-
-  useEffect(() => {
-    loader();
     setActiveData(active === 0 ? data_1 : data_2);
-    setError(data_1?.title === undefined || data_2?.title === undefined);
     animate("div", { opacity: 1, y: 0 });
-  }, [active, activeData, data_1, data_2]);
+  }, [active, data_1, data_2]);
 
   return (
     <div className={"Text"}>

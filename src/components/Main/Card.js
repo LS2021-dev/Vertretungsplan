@@ -43,7 +43,7 @@ function Card(props) {
             )}
           </strong>
         </div>
-        {props.bemerkung !== " " && (
+        {props.bemerkung !== "" && (
           <div
             className={
               "flex items-center rounded-md border border-gray-700 bg-gray-800 p-3 text-sm text-white"

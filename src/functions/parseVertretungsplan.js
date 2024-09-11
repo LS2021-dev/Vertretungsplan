@@ -1,58 +1,47 @@
 function parseVertretungsplan(data) {
   try {
-    let title = data.querySelector("body > h3").innerText;
+    let title = data["body > h3"][0];
     let date = title.split(" ")[2];
-    let lastUpdate = data.querySelector("body > div").innerText;
+    let lastUpdate = data["body > div"][0];
     let text = "";
 
-    let textTable = data.querySelector("body > table.info > tbody");
+    text = data["tr.info td b"].join("\n");
 
-    text = textTable === null || textTable.children.length === 1 ? "---" : "";
+    let vertretungsplan = [];
+    let contentGrouped = [];
+    let content = data[".mon_list > tr td"];
 
-    if (text !== "---") {
-      Array.from(textTable.children)
-        .slice(1)
-        .forEach((child) => {
-          text += child.innerText + "\n\n";
-        });
+    content.forEach((element, i) => {
+      content[i] = element.replace(/&nbsp;/g, "").replace("?", "→");
+    });
+
+    let crossedOut = data[".mon_list > tr td s"];
+
+    for (let i = 0; i < content.length; i += 6) {
+      contentGrouped.push(content.slice(i, i + 6));
     }
 
-    let table = Array.from(
-      data.querySelectorAll("body > table.mon_list > tbody > tr"),
-    );
-    let vertretungsplan = [];
-    table.forEach((row) => {
-      let klasse = row.children[0].innerText;
-      let stunde = row.children[1].innerText;
-      let fach = row.children[2].innerHTML;
-      let raum = row.children[3].innerHTML;
-      let lehrer = row.children[4].innerHTML;
-      let bemerkung = row.children[5].innerText;
+    contentGrouped.forEach((element) => {
+      let klasse = element[0];
+      let stunde = element[1];
+      let fach = element[2];
+      let raum = element[3];
+      let lehrer = element[4];
+      let bemerkung = element[5];
 
-      stunde = stunde.replaceAll(" ", "");
-      fach = fach
-        .replace("?", "→")
-        .replaceAll("<s>", "-")
-        .replaceAll("</s>", "-")
-        .replaceAll(/&nbsp;/g, "");
-      raum = raum
-        .replace("?", "→")
-        .replaceAll("<s>", "-")
-        .replaceAll("</s>", "-");
-      lehrer = lehrer
-        .replace("?", "→")
-        .replaceAll("<s>", "-")
-        .replaceAll("</s>", "-");
+      crossedOut.forEach((crossed) => {
+        if (crossed === fach) {
+          fach = `-${fach}-`;
+        }
+        if (crossed === raum) {
+          raum = `-${raum}-`;
+        }
+        if (crossed === lehrer) {
+          lehrer = `-${lehrer}-`;
+        }
+      });
 
-      klasse = klasse.replace(/<[^>]*>?/gm, "");
-      stunde = stunde.replace(/<[^>]*>?/gm, "");
-      fach = fach.replace(/<[^>]*>?/gm, "");
-      raum = raum.replace(/<[^>]*>?/gm, "");
-      lehrer = lehrer.replace(/<[^>]*>?/gm, "");
-      bemerkung = bemerkung.replace(/<[^>]*>?/gm, "");
-
-      if (!bemerkung.match(/[a-zA-Z]|\d/gm)) bemerkung = " ";
-      let vertretungsplanRow = {
+      let group = {
         klasse: klasse,
         stunde: stunde,
         fach: fach,
@@ -60,10 +49,8 @@ function parseVertretungsplan(data) {
         lehrer: lehrer,
         bemerkung: bemerkung,
       };
-      vertretungsplan.push(vertretungsplanRow);
+      vertretungsplan.push(group);
     });
-
-    vertretungsplan.shift();
 
     return {
       title: title,

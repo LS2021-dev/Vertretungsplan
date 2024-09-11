@@ -5,17 +5,20 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Text from "./components/Text";
 import Init from "./components/Init";
+import { VertretungsplanProvider } from "./context/VertretungsplanContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <HashRouter basename="/">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/text" element={<Text />} />
-        <Route path="/init" element={<Init />} />
-      </Routes>
-    </HashRouter>
+    <VertretungsplanProvider>
+      <HashRouter basename="/">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/text" element={<Text />} />
+          <Route path="/init" element={<Init />} />
+        </Routes>
+      </HashRouter>
+    </VertretungsplanProvider>
   </React.StrictMode>,
 );
